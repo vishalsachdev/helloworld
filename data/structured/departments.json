@@ -1,0 +1,72 @@
+[
+  {
+    "id": "accountancy",
+    "name": "Department of Accountancy",
+    "description": "The Department of Accountancy at Gies is consistently ranked #1 in the nation, offering undergraduate, graduate, and doctoral programs.",
+    "url": "https://giesbusiness.illinois.edu/accountancy",
+    "head": "Dr. Mary Williams",
+    "facultyCount": 25,
+    "programs": [
+      "accountancy-bs",
+      "imsa"
+    ],
+    "researchCenters": [
+      "Center for Professional Accounting Education"
+    ],
+    "rankings": [
+      "#1 Accounting Faculty (Public Accounting Report)"
+    ],
+    "contact": {
+      "email": "accountancy@illinois.edu",
+      "phone": "217-333-4545",
+      "address": "515 East Gregory Drive, Champaign, IL 61820"
+    },
+    "lastUpdated": "2025-11-19T23:29:41.320392"
+  },
+  {
+    "id": "finance",
+    "name": "Department of Finance",
+    "description": "The Finance Department offers cutting-edge research and education in corporate finance, investments, and financial markets.",
+    "url": "https://giesbusiness.illinois.edu/finance",
+    "head": "Dr. John Smith",
+    "facultyCount": 20,
+    "programs": [
+      "finance-bs",
+      "msf"
+    ],
+    "researchCenters": [
+      "Center for Financial Innovation"
+    ],
+    "rankings": [],
+    "contact": {
+      "email": "finance@illinois.edu",
+      "phone": "217-333-2740",
+      "address": "515 East Gregory Drive, Champaign, IL 61820"
+    },
+    "lastUpdated": "2025-11-19T23:29:41.320396"
+  },
+  {
+    "id": "business-administration",
+    "name": "Department of Business Administration",
+    "description": "The Business Administration Department encompasses management, marketing, strategy, and operations research.",
+    "url": "https://giesbusiness.illinois.edu/business-administration",
+    "head": "Dr. Wei Chen",
+    "facultyCount": 35,
+    "programs": [
+      "imba",
+      "imsm",
+      "mba"
+    ],
+    "researchCenters": [
+      "Gies Institute for Innovation",
+      "Center for Business Analytics"
+    ],
+    "rankings": [],
+    "contact": {
+      "email": "badm@illinois.edu",
+      "phone": "217-333-2747",
+      "address": "515 East Gregory Drive, Champaign, IL 61820"
+    },
+    "lastUpdated": "2025-11-19T23:29:41.320398"
+  }
+]
