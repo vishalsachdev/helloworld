@@ -8,6 +8,16 @@ This project showcases how the Gies College of Business website could be made ac
 
 Transform traditional websites designed for human browsers into agent-accessible platforms that enable AI assistants to efficiently query, understand, and present information.
 
+## 🧪 Experiment Workflow
+
+Use `main` as the stable baseline. Every experiment lives on its own branch:
+
+- Create a branch: `git checkout -b exp/<topic>-<owner>` (e.g. `exp/search-tuning-vishal`).
+- Keep scope tight and commit frequently (`exp: <topic> - <action>`).
+- Log what you tried in `docs/experiments/<branch>.md` (template in `docs/experiments/README.md`).
+- Share results via PR into `main` or leave the branch as a reference spike.
+- See `agents.md` for a quick checklist tailored for AI/automation agents.
+
 ## ✨ What's Included
 
 This demo includes:
@@ -218,6 +228,8 @@ pytest tests/
 - **[API Reference](docs/API.md)** - Complete API documentation
 - **[Examples](docs/EXAMPLES.md)** - Agent interaction examples
 - **[Schemas](docs/SCHEMAS.md)** - Data structure documentation
+- **[Experiment Log Template](docs/experiments/README.md)** - How to record branch-specific experiments
+- **[Agents Guide](agents.md)** - Checklist for humans/automation agents working in this repo
 - **[Presentation](PRESENTATION.md)** - Business case and pitch
 
 ## 🎯 Next Steps
