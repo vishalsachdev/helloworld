@@ -11,6 +11,8 @@ It's late evening, and I'm deep in a familiar pattern: testing new tools that pr
 1. **pchalasani/claude-code-tools** — A session management toolkit with search, resume, and context preservation
 2. **simonw/claude-code-transcripts** — A session export tool that converts JSONL transcripts to shareable HTML
 
+I discovered the second tool the way I discover most useful things: [Simon Willison's blog](https://simonwillison.net/2025/Dec/25/claude-code-transcripts/). Simon is one of my favorite tinkerers — I read basically everything he posts. His Christmas Day write-up about `claude-code-transcripts` landed in my feed while I was already mid-experiment with `aichat`. Perfect timing for a comparison.
+
 Both tools operate on the same data (Claude Code session files), which immediately raised a question: *Are these redundant? Competing? Or complementary?*
 
 This is the kind of evaluation that used to take hours of documentation reading, trial-and-error, and sometimes diving into source code. Tonight, it took about 20 minutes — and I never opened a single source file.
