@@ -2,6 +2,72 @@
 
 This repo is meant for rapid experiments—every experiment runs on its own branch and should leave a short paper trail so others can pick it up.
 
+## Project Actions
+
+### new-experiment <name>
+Creates a new experiment branch with worktree for isolated development.
+
+**Steps:**
+1. Create branch `exp/<name>-vishal` from main
+2. Add git worktree at `../<name>/` pointing to the new branch
+3. Create `../<name>/CLAUDE.md` from template below
+4. Create experiment log at `docs/experiments/exp-<name>-vishal.md`
+5. Report: "Experiment ready at ../<name>/"
+
+**CLAUDE.md template for new experiment:**
+```markdown
+# Experiment: <name>
+
+## Goal
+[To be filled in]
+
+## Repo Type
+type: code
+
+## Current Focus
+- [ ] Initial setup
+
+## Session Log
+### <today's date>
+- Created experiment
+- Next: Define goal and first steps
+```
+
+**Experiment log template:**
+```markdown
+# Experiment: exp-<name>-vishal
+- Owner: vishal
+- Date: <today's date>
+- Goal: [To be defined]
+
+## Plan
+- [ ] Step 1
+
+## Changes
+- Initial setup
+
+## Results
+- [Pending]
+
+## Follow-ups
+- [Pending]
+```
+
+**To run:** Ask Claude to "create new experiment called <name>"
+
+### graduate-experiment <name>
+Promotes an experiment to its own standalone repository.
+
+**Steps:**
+1. Verify worktree exists at `../<name>/`
+2. Create new GitHub repo: `gh repo create <name> --public --source=../<name>/`
+3. Update remote: `git -C ../<name>/ remote set-url origin git@github.com:vishalsachdev/<name>.git`
+4. Push: `git -C ../<name>/ push -u origin HEAD:main`
+5. Remove worktree: `git worktree remove ../<name>/`
+6. Report: "Graduated to https://github.com/vishalsachdev/<name>"
+
+**To run:** Ask Claude to "graduate experiment <name> to its own repo"
+
 ## Session Workflow
 
 Use these skills at the start and end of each session:
