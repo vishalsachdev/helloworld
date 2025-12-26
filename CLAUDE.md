@@ -1,0 +1,45 @@
+# helloworld
+
+Experiment framework for rapid prototyping with Claude Code tooling.
+
+## Repo Type
+type: code
+
+## Quick Reminder
+
+**Experiments are SIBLING FOLDERS, not subfolders!**
+
+```
+/Users/vishal/code/
+├── helloworld/            ← YOU ARE HERE (main)
+├── gies-agent-demo/       ← cd ../gies-agent-demo
+├── research-task-force/   ← cd ../research-task-force
+└── ...other experiments
+```
+
+Run `git worktree list` to see all experiments.
+
+## Project Actions
+
+This repo has custom actions defined in `agents.md`:
+- `new-experiment <name>` - Create a new experiment
+- `graduate-experiment <name>` - Promote to standalone repo
+
+## Current Focus
+- [ ] Test new-experiment action
+
+## Roadmap
+- [x] Set up worktree-based experiment structure
+- [x] Add Project Actions pattern
+- [x] Document worktree mental model
+- [ ] Test new-experiment action
+- [ ] Test graduate-experiment action
+
+## Backlog
+- Add more experiment templates (research, mixed)
+- Automation for cleaning up stale worktrees
+
+## Session Log
+### 2025-12-26
+- Completed: Project Actions pattern, worktree documentation, newsletter article
+- Next: Test new-experiment action
