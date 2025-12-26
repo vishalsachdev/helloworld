@@ -225,4 +225,14 @@ transcripts --gist     →  share it with others
 
 ---
 
+## See It In Action
+
+Want to see the actual session that produced this article? Here's the full transcript, exported using the very tool we discussed:
+
+**[View the session transcript →](https://gistpreview.github.io/?8cd18b1253910d75de05475da5afeea8/index.html)**
+
+This is compound engineering eating its own tail — the session where we tested `claude-code-transcripts` was itself exported using `claude-code-transcripts`.
+
+---
+
 *This article was written collaboratively with Claude, documenting a real evaluation session. The tools mentioned are [pchalasani/claude-code-tools](https://github.com/pchalasani/claude-code-tools) and [simonw/claude-code-transcripts](https://github.com/simonw/claude-code-transcripts).*
