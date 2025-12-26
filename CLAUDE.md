@@ -26,13 +26,13 @@ This repo has custom actions defined in `agents.md`:
 - `graduate-experiment <name>` - Promote to standalone repo
 
 ## Current Focus
-- [ ] Test new-experiment action
+- [ ] Test graduate-experiment action
 
 ## Roadmap
 - [x] Set up worktree-based experiment structure
 - [x] Add Project Actions pattern
 - [x] Document worktree mental model
-- [ ] Test new-experiment action
+- [x] Test new-experiment action
 - [ ] Test graduate-experiment action
 
 ## Backlog
@@ -40,6 +40,14 @@ This repo has custom actions defined in `agents.md`:
 - Automation for cleaning up stale worktrees
 
 ## Session Log
+### 2025-12-26 (night)
+- Completed: Tested new-experiment action via claude-code-tools experiment
+  - Created exp/claude-code-tools-test-vishal branch + worktree
+  - Tested pchalasani/claude-code-tools (aichat, env-safe, vault, plugins)
+  - Installed aichat and safety-hooks plugins
+  - Built Tantivy search index (20,639 sessions)
+- Next: Test graduate-experiment action
+
 ### 2025-12-26 (evening)
 - Completed: Branch cleanup and worktree maintenance
   - Fixed twitter-tracker worktree (detached HEAD → exp/twitter-tracker-vishal)
