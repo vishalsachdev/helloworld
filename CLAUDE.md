@@ -40,6 +40,14 @@ This repo has custom actions defined in `agents.md`:
 - Automation for cleaning up stale worktrees
 
 ## Session Log
+### 2025-12-26 (evening)
+- Completed: Branch cleanup and worktree maintenance
+  - Fixed twitter-tracker worktree (detached HEAD → exp/twitter-tracker-vishal)
+  - Deleted 6 stale remote branches (demo-branch, claude/*)
+  - Reviewed gies-agent-demo state, committed its CLAUDE.md
+  - Explained worktrees + remote branches (educational session)
+- Next: Test new-experiment action
+
 ### 2025-12-26
 - Completed: Project Actions pattern, worktree documentation, newsletter article
 - Next: Test new-experiment action
