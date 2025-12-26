@@ -79,16 +79,56 @@ Use these skills at the start and end of each session:
 
 ## Worktree Structure
 
-Experiments are available as sibling folders via git worktrees:
+**Key insight:** Experiments are **sibling folders**, not subfolders. They live alongside helloworld, not inside it.
 
 ```
 /Users/vishal/code/
-├── helloworld/           # main (framework only)
-├── gies-agent-demo/      # exp/gies-agent-demo-vishal
-├── research-task-force/  # exp/research-task-force-vishal
-├── twitter-tracker/      # claude/twitter-follower-tracker-*
-└── github-canvas-sync/   # claude/research-realtime-github-sync-*
+│
+├── helloworld/            ← YOU ARE HERE (main branch)
+│   ├── agents.md
+│   ├── articles/
+│   └── docs/experiments/
+│
+├── gies-agent-demo/       ← cd ../gies-agent-demo (exp/gies-agent-demo-vishal)
+├── research-task-force/   ← cd ../research-task-force (exp/research-task-force-vishal)
+├── twitter-tracker/       ← cd ../twitter-tracker
+└── github-canvas-sync/    ← cd ../github-canvas-sync
 ```
+
+### Mental Model
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                     ONE GIT HISTORY                             │
+│                   (shared .git database)                        │
+├─────────────────────────────────────────────────────────────────┤
+│                                                                 │
+│   helloworld/          gies-agent-demo/      twitter-tracker/   │
+│   ┌──────────┐         ┌──────────┐          ┌──────────┐      │
+│   │  main    │         │ exp/gies │          │ claude/* │      │
+│   │  branch  │         │  branch  │          │  branch  │      │
+│   └──────────┘         └──────────┘          └──────────┘      │
+│        │                    │                     │             │
+│        └────────────────────┴─────────────────────┘             │
+│                    All share same commits                       │
+└─────────────────────────────────────────────────────────────────┘
+```
+
+### Quick Reference
+
+| To do this... | Run this... |
+|---------------|-------------|
+| See all experiments | `git worktree list` |
+| Jump to an experiment | `cd ../gies-agent-demo` |
+| See which branch you're on | `git branch --show-current` |
+| Create new experiment | Ask Claude: "create new experiment called X" |
+
+### Why This Structure?
+
+- **Isolation:** Each experiment has its own folder, no conflicts
+- **Shared history:** All experiments share the same git log
+- **Easy switching:** Just `cd` to another folder, no branch switching
+- **Clean main:** The `helloworld/` folder stays clean (framework only)
 
 Each folder has its own `CLAUDE.md` with project context. Changes in any folder commit to the correct branch automatically.
 
