@@ -40,6 +40,14 @@ This repo has custom actions defined in `agents.md`:
 - Automation for cleaning up stale worktrees
 
 ## Session Log
+### 2025-12-26 (late night)
+- Completed: Tested Simon Willison's claude-code-transcripts tool
+  - Used `uvx claude-code-transcripts` to convert JSONL transcripts to shareable HTML
+  - Created transcript-test/ and transcript-test-large/ with generated outputs
+  - Added transcript archiving feature to close-shop agent (meta improvement!)
+  - Session transcript: [articles/transcripts/index.html](articles/transcripts/index.html)
+- Next: Test graduate-experiment action
+
 ### 2025-12-26 (night)
 - Completed: Tested new-experiment action via claude-code-tools experiment
   - Created exp/claude-code-tools-test-vishal branch + worktree
