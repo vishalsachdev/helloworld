@@ -59,6 +59,12 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
   - Created transcript-test/ and transcript-test-large/ with generated outputs
   - Added transcript archiving feature to close-shop agent (meta improvement!)
   - Session transcript: [articles/transcripts/index.html](articles/transcripts/index.html)
+- Completed: Version controlled ~/.claude configuration
+  - Set up git for ~/.claude (skills, agents, hooks, CLAUDE.md, AGENTS.md)
+  - Created .gitignore to exclude 3.5GB of auto-generated files (credstore, todos, projects, settings)
+  - Initial commit: 63 files tracked
+  - Created private GitHub repo: vishalsachdev/claude-config
+  - Added write-article skill and skill-creator integration
 - Next: Test graduate-experiment action
 
 ### 2025-12-26 (night)
