@@ -25,6 +25,19 @@ This repo has custom actions defined in `agents.md`:
 - `new-experiment <name>` - Create a new experiment
 - `graduate-experiment <name>` - Promote to standalone repo
 
+## Recommended Tools
+
+Session management tools tested in [exp-claude-code-tools-test](docs/experiments/exp-claude-code-tools-test-vishal.md):
+
+| Tool | Purpose | Command |
+|------|---------|---------|
+| `aichat search` | Find past sessions by keyword | `aichat search "topic"` |
+| `aichat search --json` | Programmatic search for agents | `aichat search --json "error" \| head` |
+| `>resume` | Quick escape when context fills | Type `>resume` in session |
+| `transcripts` | Export session to shareable HTML | `uvx claude-code-transcripts local --gist` |
+
+**Key insight:** `aichat` finds sessions (for you), `transcripts` shares them (for others).
+
 ## Current Focus
 - [ ] Test graduate-experiment action
 
