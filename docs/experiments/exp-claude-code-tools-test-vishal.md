@@ -40,7 +40,47 @@
 - `>resume` hook copies session ID to clipboard when context is filling up
 - Full-text search is more powerful than built-in session search
 
+## Recommendations (Based on My Usage Patterns)
+
+**My stats:** 3,052 Claude sessions, 1,495 in tldraw alone, 768 in helloworld
+
+### What to Keep Installed
+
+| Tool | Verdict | Why |
+|------|---------|-----|
+| `aichat` + `aichat-search` | ✅ **Keep** | Full-text search across 3K+ sessions is invaluable |
+| `aichat` plugin | ✅ **Keep** | Session-Searcher sub-agent recovers historical context |
+| `>resume` hook | ✅ **Keep** | Quick escape when context fills, preserves lineage |
+| `vault` / `env-safe` | ⚠️ Optional | Useful utilities but not core to workflow |
+| `safety-hooks` | ⚠️ Optional | May conflict with existing plugin infrastructure |
+| `tmux-cli` | ❌ Skip | Not relevant without tmux |
+
+### Comparison with claude-code-transcripts
+
+These tools are **complementary, not redundant**:
+
+| Aspect | `aichat` | `claude-code-transcripts` |
+|--------|----------|---------------------------|
+| Purpose | Session **management** | Session **export/sharing** |
+| Primary use | Internal workflow | External communication |
+| Output | Search index | Beautiful HTML |
+| Who benefits | Me (finding past work) | Others (sharing work) |
+| Key feature | Full-text search + resume | Mobile-friendly, Gist upload |
+
+**Workflow integration:**
+1. Use `aichat search` to **find** sessions worth sharing
+2. Use `claude-code-transcripts --gist` to **export** them as shareable HTML
+3. Link to Gist previews in newsletters/documentation
+
+### Key Insight
+
+> **aichat = "What sessions exist about X?"** (for you to navigate)
+> **transcripts = "How can I share this session?"** (for others to read)
+
+They're like `grep` vs `cat` — one finds things, one displays them.
+
 ## Follow-ups
 - Test `tmux-cli` when running inside tmux
 - Explore `workflow` plugin for work logging
-- Consider making `aichat search --json` part of standard workflow
+- Integrate `aichat search --json` into standard workflow
+- Add transcript export to close-shop agent for newsletter-worthy sessions
