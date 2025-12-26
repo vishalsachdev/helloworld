@@ -46,6 +46,7 @@ This repo has custom actions defined in `agents.md`:
   - Deleted 6 stale remote branches (demo-branch, claude/*)
   - Reviewed gies-agent-demo state, committed its CLAUDE.md
   - Explained worktrees + remote branches (educational session)
+  - Updated close-shop skill to use `model: opus` for Azure AI Foundry compatibility
 - Next: Test new-experiment action
 
 ### 2025-12-26
