@@ -1,54 +1,50 @@
-# helloworld
+# Experiment: claude-code-tools-test
 
-Experiment framework for rapid prototyping with Claude Code tooling.
+Testing pchalasani/claude-code-tools - a productivity toolkit for Claude Code.
+
+## Goal
+Test and evaluate the claude-code-tools package:
+- aichat (session management, search, resume)
+- tmux-cli (terminal automation)
+- Plugins (safety hooks, workflow)
+- Utilities (vault, env-safe)
 
 ## Repo Type
 type: code
 
-## Quick Reminder
-
-**Experiments are SIBLING FOLDERS, not subfolders!**
-
-```
-/Users/vishal/code/
-├── helloworld/            ← YOU ARE HERE (main)
-├── gies-agent-demo/       ← cd ../gies-agent-demo
-├── research-task-force/   ← cd ../research-task-force
-└── ...other experiments
-```
-
-Run `git worktree list` to see all experiments.
-
-## Project Actions
-
-This repo has custom actions defined in `agents.md`:
-- `new-experiment <name>` - Create a new experiment
-- `graduate-experiment <name>` - Promote to standalone repo
+## Test Plan
+1. Install via `uv tool install claude-code-tools`
+2. Install aichat-search TUI via Homebrew
+3. Test `aichat search` functionality
+4. Test `tmux-cli` in a tmux session
+5. Try installing plugins via marketplace
 
 ## Current Focus
-- [ ] Test new-experiment action
+- [x] Install and test all tools
 
-## Roadmap
-- [x] Set up worktree-based experiment structure
-- [x] Add Project Actions pattern
-- [x] Document worktree mental model
-- [ ] Test new-experiment action
-- [ ] Test graduate-experiment action
+## Test Results
+| Tool | Status | Notes |
+|------|--------|-------|
+| aichat | ✅ Works | Indexed 20,639 sessions, search + info work |
+| aichat-search | ✅ Works | Installed via Homebrew, fast full-text search |
+| tmux-cli | ⚠️ Requires tmux | Not installed in this environment |
+| env-safe | ✅ Works | Safe .env inspection |
+| vault | ✅ Works | Encrypted .env backup |
+| Plugins | ✅ Works | aichat and safety-hooks installed |
 
-## Backlog
-- Add more experiment templates (research, mixed)
-- Automation for cleaning up stale worktrees
+## Key Insights
+- **Session lineage** preserves links to parent sessions when context fills up
+- **Full-text search** via Tantivy is more powerful than built-in session search
+- **>resume hook** - type `>resume` when context fills, copies session ID to clipboard
+- **Safety hooks** guard against git add ., rm, .env exposure
 
 ## Session Log
-### 2025-12-26 (evening)
-- Completed: Branch cleanup and worktree maintenance
-  - Fixed twitter-tracker worktree (detached HEAD → exp/twitter-tracker-vishal)
-  - Deleted 6 stale remote branches (demo-branch, claude/*)
-  - Reviewed gies-agent-demo state, committed its CLAUDE.md
-  - Explained worktrees + remote branches (educational session)
-  - Updated close-shop skill to use `model: opus` for Azure AI Foundry compatibility
-- Next: Test new-experiment action
-
 ### 2025-12-26
-- Completed: Project Actions pattern, worktree documentation, newsletter article
-- Next: Test new-experiment action
+- Created experiment to test pchalasani/claude-code-tools
+- Installed claude-code-tools via uv (4 executables)
+- Installed aichat-search via Homebrew
+- Built Tantivy index (20,639 sessions)
+- Tested aichat search (works with --json for programmatic use)
+- Tested env-safe and vault utilities
+- Installed aichat and safety-hooks plugins
+- Result: Solid toolkit, recommended for power users
