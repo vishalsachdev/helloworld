@@ -3,7 +3,7 @@
 **Branch**: `exp/context-graphs-vishal`
 **Worktree**: `../context-graphs`
 **Started**: 2025-12-27
-**Status**: Active
+**Status**: Graduated to https://github.com/vishalsachdev/context-graphs
 **Type**: Research + Prototype
 
 ## Hypothesis
