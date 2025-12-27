@@ -39,21 +39,37 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
 **Key insight:** `aichat` finds sessions (for you), `transcripts` shares them (for others).
 
 ## Current Focus
-- [ ] Test graduate-experiment action
+- [ ] Add more experiment templates (research, mixed)
 
 ## Roadmap
 - [x] Set up worktree-based experiment structure
 - [x] Add Project Actions pattern
 - [x] Document worktree mental model
 - [x] Test new-experiment action
-- [ ] Test graduate-experiment action
+- [x] Test graduate-experiment action
 
 ## Backlog
 - Add more experiment templates (research, mixed)
 - Automation for cleaning up stale worktrees
 
 ## Session Log
-### 2025-12-27
+### 2025-12-27 (evening)
+- Completed: Created context-graphs experiment and graduated to standalone repo
+  - Explored Venkatraman and Foundation Capital frameworks for AI context management
+  - Built 3 prototypes:
+    - decision_trace_extractor.py - extracts decision traces from Claude Code thinking blocks
+    - cross_session_analyzer.py - analyzes patterns across sessions
+    - projection_function.py - implements the projection function (datagraph -> context)
+  - Key finding: Claude Code thinking blocks ARE decision traces (business-level semantics on execution telemetry)
+  - Extracted 165+ decision traces across sessions
+  - Generated markdown output documents with relevance scoring
+  - **Successfully tested graduate-experiment action** - promoted to standalone repo
+  - Graduated repo: https://github.com/vishalsachdev/context-graphs
+  - Deleted experiment branch from helloworld after graduation
+  - Added sample data and configurable --transcripts flag for portability
+- Next: Add more experiment templates (research, mixed)
+
+### 2025-12-27 (morning)
 - Completed: Created factorio-skills experiment
   - New worktree at ../factorio-skills on branch exp/factorio-skills-vishal
   - Built "Flow Factory" MVP game with HTML5 Canvas
