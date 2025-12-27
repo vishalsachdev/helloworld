@@ -53,6 +53,17 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
 - Automation for cleaning up stale worktrees
 
 ## Session Log
+### 2025-12-27
+- Completed: Created factorio-skills experiment
+  - New worktree at ../factorio-skills on branch exp/factorio-skills-vishal
+  - Built "Flow Factory" MVP game with HTML5 Canvas
+  - Grid-based world with resource nodes (iron/copper)
+  - Conveyor belt placement system (click + R to rotate)
+  - Items spawn from nodes and flow along belts to chests
+  - Real-time throughput tracking
+  - Documented Factorio -> Agentic Coding skill mappings
+- Next: Add item backup/bottleneck logic (items stop when path blocked)
+
 ### 2025-12-26 (late night)
 - Completed: Tested Simon Willison's claude-code-transcripts tool
   - Used `uvx claude-code-transcripts` to convert JSONL transcripts to shareable HTML
