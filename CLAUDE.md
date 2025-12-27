@@ -1,91 +1,56 @@
-# helloworld
+# Experiment: factorio-skills
 
-Experiment framework for rapid prototyping with Claude Code tooling.
+A browser-based game inspired by Factorio, designed to build mental models that transfer to agentic coding.
+
+## Goal
+
+Create a simplified Factorio-like game where the core mechanics directly map to skills needed for working with AI agents:
+- **Resource flow** → Token/context management
+- **Factory blueprints** → Reusable agent compositions
+- **Throughput optimization** → Parallelization & batching
+- **Dependency chains** → Agent orchestration
+- **Debugging bottlenecks** → Tracing agent failures
 
 ## Repo Type
 type: code
 
-## Quick Reminder
+## The Hypothesis
 
-**Experiments are SIBLING FOLDERS, not subfolders!**
+Expert Factorio players excel at:
+1. Thinking in systems, not individual actions
+2. Designing for scalability from the start
+3. Debugging by tracing dependencies upstream
+4. Balancing throughput across parallel processes
+5. Building modular, reusable components
 
-```
-/Users/vishal/code/
-├── helloworld/            ← YOU ARE HERE (main)
-├── gies-agent-demo/       ← cd ../gies-agent-demo
-├── research-task-force/   ← cd ../research-task-force
-└── ...other experiments
-```
+These are *exactly* the skills needed for effective agentic coding.
 
-Run `git worktree list` to see all experiments.
+## Skill Mapping (Factorio → Agentic Coding)
 
-## Project Actions
+| Factorio Concept | Agentic Coding Equivalent |
+|------------------|---------------------------|
+| Conveyor belts | Data pipelines between agents |
+| Assemblers | Specialized agents (tools) |
+| Inserters | Context injection / tool calls |
+| Power grid | Token budget / rate limits |
+| Blueprints | Saved agent compositions |
+| Logistics network | Agent orchestration layer |
+| Bottleneck (red inserter) | Rate-limited API / slow agent |
+| Research tree | Capability unlocks |
 
-This repo has custom actions defined in `agents.md`:
-- `new-experiment <name>` - Create a new experiment
-- `graduate-experiment <name>` - Promote to standalone repo
-
-## Recommended Tools
-
-Session management tools tested in [exp-claude-code-tools-test](docs/experiments/exp-claude-code-tools-test-vishal.md):
-
-| Tool | Purpose | Command |
-|------|---------|---------|
-| `aichat search` | Find past sessions by keyword | `aichat search "topic"` |
-| `aichat search --json` | Programmatic search for agents | `aichat search --json "error" \| head` |
-| `>resume` | Quick escape when context fills | Type `>resume` in session |
-| `transcripts` | Export session to shareable HTML | `uvx claude-code-transcripts local --gist` |
-
-**Key insight:** `aichat` finds sessions (for you), `transcripts` shares them (for others).
+## Tech Stack
+- **Rendering**: HTML5 Canvas or Phaser.js
+- **State**: Vanilla JS (start simple)
+- **No backend**: All client-side for now
 
 ## Current Focus
-- [ ] Test graduate-experiment action
-
-## Roadmap
-- [x] Set up worktree-based experiment structure
-- [x] Add Project Actions pattern
-- [x] Document worktree mental model
-- [x] Test new-experiment action
-- [ ] Test graduate-experiment action
-
-## Backlog
-- Add more experiment templates (research, mixed)
-- Automation for cleaning up stale worktrees
+- [ ] Define MVP game mechanics
+- [ ] Create basic grid-based world
+- [ ] Implement resource nodes (iron, copper)
+- [ ] Add conveyor belt placement
 
 ## Session Log
-### 2025-12-26 (late night)
-- Completed: Tested Simon Willison's claude-code-transcripts tool
-  - Used `uvx claude-code-transcripts` to convert JSONL transcripts to shareable HTML
-  - Created transcript-test/ and transcript-test-large/ with generated outputs
-  - Added transcript archiving feature to close-shop agent (meta improvement!)
-  - Session transcript: [articles/transcripts/index.html](articles/transcripts/index.html)
-- Completed: Version controlled ~/.claude configuration
-  - Set up git for ~/.claude (skills, agents, hooks, CLAUDE.md, AGENTS.md)
-  - Created .gitignore to exclude 3.5GB of auto-generated files (credstore, todos, projects, settings)
-  - Initial commit: 63 files tracked
-  - Created private GitHub repo: vishalsachdev/claude-config
-  - Added write-article skill and skill-creator integration
-  - Archived session to Gist and linked in compound engineering article
-  - Gist: https://gistpreview.github.io/?8cd18b1253910d75de05475da5afeea8/index.html
-- Next: Test graduate-experiment action
-
-### 2025-12-26 (night)
-- Completed: Tested new-experiment action via claude-code-tools experiment
-  - Created exp/claude-code-tools-test-vishal branch + worktree
-  - Tested pchalasani/claude-code-tools (aichat, env-safe, vault, plugins)
-  - Installed aichat and safety-hooks plugins
-  - Built Tantivy search index (20,639 sessions)
-- Next: Test graduate-experiment action
-
-### 2025-12-26 (evening)
-- Completed: Branch cleanup and worktree maintenance
-  - Fixed twitter-tracker worktree (detached HEAD → exp/twitter-tracker-vishal)
-  - Deleted 6 stale remote branches (demo-branch, claude/*)
-  - Reviewed gies-agent-demo state, committed its CLAUDE.md
-  - Explained worktrees + remote branches (educational session)
-  - Updated close-shop skill to use `model: opus` for Azure AI Foundry compatibility
-- Next: Test new-experiment action
-
 ### 2025-12-26
-- Completed: Project Actions pattern, worktree documentation, newsletter article
-- Next: Test new-experiment action
+- Created experiment from helloworld framework
+- Documented Factorio → Agentic Coding skill mapping
+- Next: Design MVP mechanics and start prototyping
