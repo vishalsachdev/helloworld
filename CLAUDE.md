@@ -65,6 +65,8 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
   - Initial commit: 63 files tracked
   - Created private GitHub repo: vishalsachdev/claude-config
   - Added write-article skill and skill-creator integration
+  - Archived session to Gist and linked in compound engineering article
+  - Gist: https://gistpreview.github.io/?8cd18b1253910d75de05475da5afeea8/index.html
 - Next: Test graduate-experiment action
 
 ### 2025-12-26 (night)
