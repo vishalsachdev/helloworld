@@ -5,14 +5,28 @@ This repo is meant for rapid experiments—every experiment runs on its own bran
 ## Project Actions
 
 ### new-experiment <name>
-Creates a new experiment branch with worktree for isolated development.
+Creates a new experiment as an **orphan branch** with worktree for isolated development.
+
+**Why orphan?** Orphan branches start with no files, so experiments don't inherit helloworld artifacts. This makes graduation clean—only experiment files exist.
 
 **Steps:**
-1. Create branch `exp/<name>-vishal` from main
-2. Add git worktree at `../<name>/` pointing to the new branch
-3. Create `../<name>/CLAUDE.md` from template below
-4. Create experiment log at `docs/experiments/exp-<name>-vishal.md`
-5. Report: "Experiment ready at ../<name>/"
+1. Create orphan branch `exp/<name>-vishal`: `git checkout --orphan exp/<name>-vishal`
+2. Remove all inherited files: `git reset --hard` (clears index without deleting worktree files)
+3. Add git worktree at `../<name>/` pointing to the new branch
+4. Create `../<name>/CLAUDE.md` from template below
+5. Create experiment log at `docs/experiments/exp-<name>-vishal.md` (on main branch)
+6. In the worktree, make initial commit with just CLAUDE.md
+7. Report: "Experiment ready at ../<name>/"
+
+**Commands:**
+```bash
+# From helloworld directory
+git checkout --orphan exp/<name>-vishal
+git reset --hard
+git checkout main  # Return to main
+git worktree add ../<name>/ exp/<name>-vishal
+# Then create CLAUDE.md in ../<name>/ and commit
+```
 
 **CLAUDE.md template for new experiment:**
 ```markdown
@@ -58,13 +72,36 @@ type: code
 ### graduate-experiment <name>
 Promotes an experiment to its own standalone repository.
 
+**IMPORTANT:** If the experiment was created before orphan branches were standard, it may contain helloworld artifacts. Check and clean before pushing.
+
 **Steps:**
 1. Verify worktree exists at `../<name>/`
-2. Create new GitHub repo: `gh repo create <name> --public --source=../<name>/`
-3. Update remote: `git -C ../<name>/ remote set-url origin git@github.com:vishalsachdev/<name>.git`
-4. Push: `git -C ../<name>/ push -u origin HEAD:main`
-5. Remove worktree: `git worktree remove ../<name>/`
-6. Report: "Graduated to https://github.com/vishalsachdev/<name>"
+2. **Check for helloworld artifacts** in the worktree:
+   - Known artifacts: `agents.md`, `articles/` (with helloworld articles), `docs/experiments/`, `transcript-test*/`
+   - If found, these need to be removed before graduation
+3. **Check for nested content**: If experiment content is in `../<name>/<name>/`, it needs to be elevated to root
+4. Create new GitHub repo: `gh repo create <name> --public`
+5. In the worktree, set remote: `git -C ../<name>/ remote add origin git@github.com:vishalsachdev/<name>.git` (or `set-url` if exists)
+6. Push: `git -C ../<name>/ push -u origin HEAD:main`
+7. Remove worktree from helloworld: `git worktree remove ../<name>/`
+8. Delete the experiment branch from helloworld: `git branch -D exp/<name>-vishal`
+9. Update experiment log to mark as "graduated"
+10. Report: "Graduated to https://github.com/vishalsachdev/<name>"
+
+**Cleanup for legacy experiments (non-orphan branches):**
+```bash
+cd ../<name>
+# Remove helloworld artifacts (move to TRASH first)
+mkdir -p TRASH
+mv agents.md docs/ transcript-test* TRASH/ 2>/dev/null
+# If content is nested, elevate it
+mv <name>/* . 2>/dev/null && mv <name> TRASH/
+# Add TRASH to .gitignore
+echo -e "\nTRASH/" >> .gitignore
+# Commit cleanup
+git add -u && git add .gitignore
+git commit -m "Clean up: remove helloworld artifacts before graduation"
+```
 
 **To run:** Ask Claude to "graduate experiment <name> to its own repo"
 
