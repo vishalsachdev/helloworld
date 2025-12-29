@@ -19,3 +19,7 @@ venv/
 # Temporary files
 *.tmp
 *.log
+
+# Trash (deleted files kept for reference)
+TRASH/
+TRASH-FILES.md
