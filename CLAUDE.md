@@ -53,6 +53,22 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
 - Automation for cleaning up stale worktrees
 
 ## Session Log
+### 2025-12-29
+- Completed: Graduated kg-learning experiment to standalone repo
+  - Initial graduation had issues: helloworld artifacts included, nested folder structure
+  - Fixed kg-learning repo: moved content from nested folder to root, removed artifacts
+  - Graduated repo: https://github.com/vishalsachdev/kg-learning
+- Completed: Fixed experiment graduation workflow in agents.md
+  - Updated `new-experiment` to use orphan branches (clean start, no inherited files)
+  - Updated `graduate-experiment` with cleanup steps for legacy experiments
+  - Added documentation for handling helloworld artifacts
+  - **Key insight**: Graduation was broken because experiment branches inherited all helloworld files
+- Completed: Created newsletter article about kg-learning journey
+  - Written to kg-learning repo: `articles/2025-12-29-when-your-knowledge-graph-graduates.md`
+  - Created cover images (LinkedIn, Substack, Twitter)
+- Session transcript: https://gistpreview.github.io/?8313283b7d967fa391e52ce941535a47
+- Next: Add more experiment templates (research, mixed)
+
 ### 2025-12-27 (evening)
 - Completed: Created context-graphs experiment and graduated to standalone repo
   - Explored Venkatraman and Foundation Capital frameworks for AI context management
