@@ -53,6 +53,15 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
 - Automation for cleaning up stale worktrees
 
 ## Session Log
+### 2025-12-31
+- Completed: Created sw-llm-kb experiment (Simon Willison LLM Knowledge Base)
+  - New worktree at ../sw-llm-kb on branch exp/sw-llm-kb-vishal (orphan branch)
+  - Built queryable knowledge base with Markdown + YAML frontmatter structure
+  - Extracted 4 insights from Simon Willison's "2025: The Year in LLMs" article
+  - Created shell-based query tool (./query.sh) with category, tag, and keyword search
+  - **Key pattern**: Structured notes with frontmatter enable semantic querying without embedding models
+- Next: Add more experiment templates (research, mixed)
+
 ### 2025-12-29
 - Completed: Graduated kg-learning experiment to standalone repo
   - Initial graduation had issues: helloworld artifacts included, nested folder structure
