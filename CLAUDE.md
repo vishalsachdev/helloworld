@@ -53,6 +53,17 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
 - Automation for cleaning up stale worktrees
 
 ## Session Log
+### 2026-03-05 (b)
+- Completed: Full skill audit and cleanup (64 → 31 skills)
+  - Evaluated `/start-session` and `/wrap-up-session` — fixed both with stash/worktree/stale-log support
+  - Fixed `check-drip-campaign` (missing YAML frontmatter)
+  - Deleted 31 textbook/microsim skills (pipeline no longer active)
+  - Extracted 5 learning-design sub-skills from `learning-design-pillars` repo (Option A)
+  - Trimmed extracted skills: `canvas-assignment-design` 446→120, `canvas-course-audit` 375→119, etc.
+  - Deleted 8 redundant pattern skills Claude already knows (complex-state, resilient-async, zod-forms, etc.)
+  - Committed and pushed to claude-config repo
+- Next: Add more experiment templates (research, mixed)
+
 ### 2026-03-05
 - Completed: Created openai-api skill for Claude Code
   - Modeled after Anthropic's `claude-api` skill from `anthropics/skills` repo
