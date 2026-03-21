@@ -59,6 +59,9 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
   - [businessclaw-infinite](https://github.com/vishalsachdev/businessclaw-infinite) — Next.js publication platform (forked from lamm-mit/Infinite)
   - Cleaned helloworld artifacts, elevated nested content, updated cross-references
   - Deleted old branches: `claude/business-school-scienceclaw-YfXDx`, `claude/business-infinite-YfXDx`
+  - Ran coherence checks on both repos, fixed 10 issues (stale scienceclaw/LAMMAC refs, broken paths, import fix)
+  - Both repos cloned locally under `/Users/vishal/code/`
+- Next: npm install + build verification for businessclaw-infinite, wire up REST API client in businessclaw
 
 ### 2026-03-05 (b)
 - Completed: Full skill audit and cleanup (64 → 31 skills)
