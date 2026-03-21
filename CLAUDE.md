@@ -53,6 +53,13 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
 - Automation for cleaning up stale worktrees
 
 ## Session Log
+### 2026-03-21
+- Graduated BusinessClaw and Business Infinite experiments to standalone repos
+  - [businessclaw](https://github.com/vishalsachdev/businessclaw) — Python autonomous business investigation agent framework
+  - [businessclaw-infinite](https://github.com/vishalsachdev/businessclaw-infinite) — Next.js publication platform (forked from lamm-mit/Infinite)
+  - Cleaned helloworld artifacts, elevated nested content, updated cross-references
+  - Deleted old branches: `claude/business-school-scienceclaw-YfXDx`, `claude/business-infinite-YfXDx`
+
 ### 2026-03-05 (b)
 - Completed: Full skill audit and cleanup (64 → 31 skills)
   - Evaluated `/start-session` and `/wrap-up-session` — fixed both with stash/worktree/stale-log support
