@@ -34,10 +34,10 @@ By the end of this course, students will be able to:
 2. **Evaluate** AI/ML system capabilities and limitations using appropriate metrics (precision, recall, F1, model drift) alongside business KPIs
 3. **Apply** structured frameworks (Google PAIR, Microsoft HAX) to design human-centered AI product experiences
 4. **Navigate** the AI regulatory landscape (EU AI Act, NIST AI RMF) and integrate responsible AI principles into product decisions
-5. **Develop** an AI product strategy — from opportunity identification through data requirements, model selection, evaluation, and go-to-market
+5. **Build** a working AI-powered product — from first prototype through iterative improvement based on evaluation data and user feedback
 6. **Communicate** AI product tradeoffs to cross-functional stakeholders (data scientists, engineers, executives, legal/compliance)
-7. **Prototype** AI-powered product concepts using prompt engineering and no-code/low-code tools
-8. **Assess** build vs. buy decisions for AI capabilities, including vendor evaluation and API integration strategies
+7. **Iterate** on AI product quality using prompt engineering, evaluation pipelines, and systematic user testing
+8. **Assess** build vs. buy decisions for AI capabilities, making real API integration and tooling choices in their build project
 
 ---
 
@@ -48,17 +48,34 @@ By the end of this course, students will be able to:
 - **Practitioner-first:** Every session connects theory to real product decisions. No course exists in isolation — frameworks are tools for action.
 - **Probabilistic thinking as foundation:** Following Vashishta's core insight, the course trains students to manage uncertainty rather than eliminate it. AI products don't have "correct" outputs — they have distributions of acceptable outcomes.
 - **Cross-functional fluency:** Students practice translating between technical (data science/ML engineering) and business (strategy/finance/legal) languages — the core MSTM value proposition.
-- **Hands-on evaluation:** Students interact with AI systems, evaluate outputs, and develop intuition for what "good" looks like before they try to build.
+- **Hands-on building:** Students don't just analyze AI products — they build one. Starting in Week 4, teams prototype, test, iterate, and ship a working AI product using LLM APIs and no-code/low-code tools.
 
 ### Assessment Structure
 
 | Component | Weight | Description |
 |-----------|--------|-------------|
-| Weekly case analyses | 30% | Individual written analyses of AI product decisions |
-| AI Product Audit | 20% | Team project: evaluate an existing AI product using course frameworks |
-| AI Product Proposal | 30% | Team capstone: full product strategy for an AI-powered product |
+| Weekly case analyses | 20% | Individual written analyses of AI product decisions |
+| AI Product Build (iterative) | 40% | Team project: build, test, and iterate on a working AI product over Weeks 4-8 |
+| Build Journal & Retrospective | 20% | Team: weekly build logs documenting decisions, pivots, evaluation results, and user feedback |
+| Demo Day & Live Q&A | 10% | Week 8: live product demo to instructor + industry judges |
 | Class participation | 10% | Discussion contributions, peer feedback |
-| Prompt engineering lab | 10% | Hands-on exercises with LLM-based product prototyping |
+
+### Build Project Arc
+
+The team build project runs across the second half of the course. Teams of 3-4 select a problem domain in Week 3 and progressively build a working AI-powered product:
+
+| Week | Build Milestone | What Teams Ship |
+|------|----------------|-----------------|
+| 3 | Problem selection & scoping | Problem brief, target user, success criteria |
+| 4 | V0 — First working prototype | Functional prototype using LLM API (can be ugly) |
+| 5 | V1 — Responsible AI audit & fix | Updated prototype with bias/safety mitigations applied |
+| 6 | V2 — Strategy pivot or double-down | Revised product based on evaluation data + build-vs-buy decision |
+| 7 | V3 — Prompt-optimized & instrumented | Production-quality prompts, evaluation pipeline, cost analysis |
+| 8 | Final demo | Live demo + retrospective document |
+
+**Approved build tools:** OpenAI API, Anthropic API, Google Gemini API, Streamlit, Gradio, Vercel AI SDK, Langchain, n8n, Zapier AI, Replit Agent, Claude Code, Cursor. Teams choose their stack — the PM decisions matter more than the code quality.
+
+**What "working" means:** The product must accept real user input and produce useful AI-powered output. It does not need to be production-grade, but it must be demo-able to a real user. A polished slide deck with no working product earns zero build credit.
 
 ---
 
@@ -145,7 +162,9 @@ By the end of this course, students will be able to:
 - Vashishta, V. "Measuring What Matters in AI Products" (2025)
 - Shi, Cai, Rong. *Reimagined: Building Products with Generative AI*, Ch. on evaluation
 
-**Deliverable:** Evaluation framework design — propose a metric dashboard for a specific AI product
+**Deliverable:**
+- Evaluation framework design — propose a metric dashboard for a specific AI product
+- **Build Project Kickoff:** Submit problem brief for team build project — problem statement, target user, success criteria, and proposed tool stack. Instructor approves or redirects.
 
 ---
 
@@ -172,7 +191,7 @@ By the end of this course, students will be able to:
 - Mental models for AI uncertainty: how users interpret probabilistic outputs
 - The "automation surprise" problem and how to prevent it
 
-**Workshop:** HAX Workbook exercise — cross-functional team (PM, designer, engineer roles) works through the Microsoft HAX planning process for a proposed AI feature.
+**Workshop:** HAX Workbook exercise — apply the Microsoft HAX planning process to your team's build project. Then build.
 
 **Readings:**
 - Google PAIR Guidebook (pair.withgoogle.com/guidebook)
@@ -180,7 +199,9 @@ By the end of this course, students will be able to:
 - Apple Human Interface Guidelines, Machine Learning section
 - Lipenkova, J. *The Art of AI Product Development*, Ch. on UX design
 
-**Deliverable:** UX audit — apply PAIR + HAX frameworks to evaluate an existing AI product's user experience. Identify 3 specific improvements.
+**Deliverables:**
+- UX audit — apply PAIR + HAX frameworks to evaluate an existing AI product's user experience. Identify 3 specific improvements.
+- **Build Milestone V0:** First working prototype. Must accept user input and produce AI-powered output. Ugly is fine — working is required. Submit build journal entry #1: what you built, what surprised you, what broke.
 
 ---
 
@@ -214,7 +235,9 @@ By the end of this course, students will be able to:
 - Nika, M. & Granados, D. *The AI Product Playbook*, Ch. on ethics and governance
 - Vashishta, V. "Responsible AI Is a Product Problem, Not a Research Problem" (2025)
 
-**Deliverable:** Regulatory impact assessment — for your team's target AI product, classify its risk level under EU AI Act and identify the top 5 compliance requirements that affect product decisions.
+**Deliverables:**
+- Regulatory impact assessment — classify your build project's risk level under EU AI Act and identify the top 5 compliance requirements that affect your product decisions.
+- **Build Milestone V1:** Apply responsible AI audit to your prototype. Test for bias, safety failures, and hallucinations. Fix what you find. Submit build journal entry #2: what you tested, what you found, what you changed.
 
 ---
 
@@ -242,7 +265,7 @@ By the end of this course, students will be able to:
 - Vashishta's practitioner framework: moving from experimentation to production
 - Stakeholder communication: translating AI uncertainty into executive-friendly language
 
-**Workshop:** AI Product Strategy Canvas — teams develop a complete strategy canvas for their capstone product proposal.
+**Workshop:** AI Product Strategy Canvas — teams map their build project onto the strategy canvas. Key decision point: based on Weeks 4-5 learnings, do you pivot, narrow scope, or double down?
 
 **Readings:**
 - Vashishta, V. "The AI Product Strategy Framework" (2025)
@@ -250,7 +273,9 @@ By the end of this course, students will be able to:
 - Cagan, M. *Transformed*, sections on AI-era product organizations
 - Moore, G. *Crossing the Chasm* — technology adoption lifecycle applied to AI products
 
-**Deliverable:** Draft AI Product Strategy Canvas for capstone project (team submission)
+**Deliverables:**
+- AI Product Strategy Canvas for your build project
+- **Build Milestone V2:** Pivot or improve based on evaluation data. If your V0/V1 revealed the problem was wrong, pivot. If the approach was right but execution was rough, improve. Submit build journal entry #3: what the data told you, what you decided, and why.
 
 ---
 
@@ -274,53 +299,62 @@ By the end of this course, students will be able to:
   - Cost management: token optimization, caching strategies
 - The "LLM Product Manager" role: emerging responsibilities and skills
 
-**Lab Exercise:** Prompt engineering workshop
-- Design a system prompt for a customer service AI assistant
-- Iterate through 3 versions based on evaluation criteria
-- Compare outputs across models (GPT-4, Claude, Gemini)
-- Document the prompt development process as a product spec
+**Lab Exercise:** Prompt engineering applied to your build project
+- Audit and optimize the prompts in your product
+- Set up an evaluation pipeline (even a simple spreadsheet-based one counts)
+- Run a cost analysis: tokens per request, cost per user session, projected monthly spend
+- Compare at least 2 models for your use case (cost vs. quality tradeoff)
 
 **Readings:**
 - PromptLayer blog: "Product Manager Levels — LLM Competency" (2024)
 - Langfuse blog: "LLM Product Management" (2024)
 - 58 prompting techniques taxonomy (research overview)
 
-**Deliverable:** Prompt engineering portfolio — documented prompt development for 2 product use cases, including iteration history and evaluation results
+**Deliverables:**
+- Prompt engineering portfolio — documented prompt optimization for your build project, including before/after comparisons and evaluation results
+- **Build Milestone V3:** Production-quality prompts, evaluation pipeline running, cost analysis complete. The product should now be good enough to demo to a stranger. Submit build journal entry #4: prompt iteration history, evaluation scores, cost projections.
 
 ---
 
-### Week 8: Capstone Presentations and the Future of AI PM
+### Week 8: Demo Day and the Future of AI PM
 
-**Theme:** Ship it — present your AI product strategy and look ahead.
+**Theme:** Ship it — demo your product, reflect on what you learned, and look ahead.
 
 **Learning Objectives:**
-- Present a complete AI product strategy to a cross-functional audience
-- Synthesize course frameworks into a coherent product management approach
+- Demo a working AI product to a live audience and handle real-time feedback
+- Articulate product decisions and tradeoffs learned through building
 - Identify personal development priorities for an AI PM career
 
-**Topics (first half):**
+**Topics (first 30 min):**
 - The future of AI product management:
   - Agentic AI: products that act autonomously
   - Multimodal AI: products that see, hear, read, and speak
   - On-device AI: privacy-first product architectures
   - AI-native organizations: how product teams are restructuring
 - Career pathways: AI PM roles, compensation trends, skill development
-- The AI PM's continuous learning toolkit
 
-**Capstone Presentations (second half):**
-- Each team presents their AI Product Proposal (15 min + 5 min Q&A)
+**Demo Day (remaining time):**
+- Each team gives a **live product demo** (10 min demo + 10 min Q&A)
+  - Must demo the real product — no slide decks substituting for live functionality
+  - Q&A includes technical, strategic, and ethical questions from judges and peers
 - Evaluation by instructor + industry judges (if available)
-- Peer feedback using course evaluation frameworks
+- Peer voting: "Which product would you actually use?"
 
-**Deliverable:** Final AI Product Proposal (team) — complete document including:
-- Problem statement and opportunity assessment
-- AI Product Strategy Canvas
-- Data requirements and feasibility analysis
-- Evaluation framework and success metrics
-- UX design informed by PAIR/HAX frameworks
-- Regulatory assessment (EU AI Act / NIST AI RMF)
-- Go-to-market strategy and roadmap
-- Risk analysis and mitigation plan
+**Deliverables:**
+
+**1. Live Demo (10%)** — evaluated on:
+- Does the product actually work?
+- Does it solve a real problem for a real user?
+- How well does the team handle tough questions?
+
+**2. Build Retrospective Document (part of Build Journal 20%)** — final team submission:
+- The build journey: V0 → V1 → V2 → V3 with screenshots/recordings at each stage
+- Every pivot and why — what the data told you vs. what you assumed
+- Evaluation results: model metrics, user feedback, cost analysis
+- Responsible AI assessment: what risks you found and how you mitigated them
+- What you'd do differently with 8 more weeks
+- Strategy canvas (final version, updated from Week 6 based on what you learned by building)
+- Total cost to build and projected cost to operate
 
 ---
 
@@ -387,12 +421,25 @@ By the end of this course, students will be able to:
 - Local/regional AI startup founders (Week 8: capstone judges)
 
 ### Assessment Rubrics
-Each deliverable should be evaluated on:
+
+**Weekly Case Analyses (individual):**
 1. **Framework application** — correct and thoughtful use of course frameworks
 2. **Business reasoning** — commercial viability and strategic clarity
-3. **Technical grounding** — appropriate level of technical understanding (not too shallow, not overreaching)
+3. **Technical grounding** — appropriate level of technical understanding
 4. **Stakeholder communication** — ability to explain AI decisions to non-technical audiences
-5. **Ethical consideration** — integration of responsible AI principles (not as an afterthought)
+
+**Build Project (team):**
+1. **Does it work?** — the product must function in a live demo (non-negotiable)
+2. **Iteration quality** — evidence of learning and improving across V0→V3 (pivots are fine; stagnation isn't)
+3. **Evaluation rigor** — did the team measure what matters and act on the data?
+4. **Responsible AI integration** — bias/safety/fairness considered and addressed (not as an afterthought)
+5. **PM decision-making** — build journal shows thoughtful tradeoffs (scope, cost, quality, speed)
+6. **User-centeredness** — was a real user consulted at any point? Did their feedback change anything?
+
+**Build Journal:**
+1. **Honesty** — documents failures and pivots, not just successes
+2. **Decision traceability** — each decision is linked to evidence (data, user feedback, cost analysis)
+3. **Completeness** — all 4 weekly entries + final retrospective
 
 ### Course Evolution
 This course should be updated annually. Key areas to refresh:
