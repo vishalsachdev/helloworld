@@ -53,6 +53,19 @@ Session management tools tested in [exp-claude-code-tools-test](docs/experiments
 - Automation for cleaning up stale worktrees
 
 ## Session Log
+### 2026-03-31
+- Graduated hermes-makerlab experiment to standalone repo: [makerlab-infra](https://github.com/vishalsachdev/makerlab-infra)
+  - Installed Hermes agent on MakerLab iMac (Tailscale SSH, GPT-5.4, Telegram gateway)
+  - Set up Cloudflare Tunnel with 5 subdomains on illinihunt.org (lab, db, sql, bot, admin)
+  - Installed PostgreSQL 16.8, pgAdmin4, SQL API — all user-space (no sudo)
+  - Migrated BADM 554 databases from AWS RDS MySQL → self-hosted PostgreSQL (4 DBs, 85K+ rows)
+  - Deleted AWS RDS instance (saving ~$100/mo)
+  - Built SQL API at sql.illinihunt.org for Google Colab student access
+  - Created Canvas page "Database Access (New - PostgreSQL)" for students
+  - Consolidated Cloudflare reference: ~/.claude/references/cloudflare-illinihunt.md
+  - Wrote newsletter article: "From Cloud to Campus"
+- Next: Deploy badm554-bot, install Portainer, add more iMacs to Tailscale
+
 ### 2026-03-21
 - Graduated BusinessClaw and Business Infinite experiments to standalone repos
   - [businessclaw](https://github.com/vishalsachdev/businessclaw) — Python autonomous business investigation agent framework
