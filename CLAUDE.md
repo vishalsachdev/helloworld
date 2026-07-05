@@ -43,11 +43,13 @@ These are *exactly* the skills needed for effective agentic coding.
 - **State**: Vanilla JS (start simple)
 - **No backend**: All client-side for now
 
-## Current Focus
+## Roadmap
 - [ ] Define MVP game mechanics
 - [ ] Create basic grid-based world
 - [ ] Implement resource nodes (iron, copper)
 - [ ] Add conveyor belt placement
+- [ ] Add assembler buildings
+- [ ] Implement power grid mechanics
 
 ## Session Log
 ### 2025-12-26
