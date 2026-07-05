@@ -1,0 +1,34 @@
+# Session Archive
+
+### 2026-03-21
+- Graduated BusinessClaw and Business Infinite experiments to standalone repos
+  - [businessclaw](https://github.com/vishalsachdev/businessclaw) — Python autonomous business investigation agent framework
+  - [businessclaw-infinite](https://github.com/vishalsachdev/businessclaw-infinite) — Next.js publication platform (forked from lamm-mit/Infinite)
+  - Cleaned helloworld artifacts, elevated nested content, updated cross-references
+  - Deleted old branches: `claude/business-school-scienceclaw-YfXDx`, `claude/business-infinite-YfXDx`
+  - Ran coherence checks on both repos, fixed 10 issues (stale scienceclaw/LAMMAC refs, broken paths, import fix)
+  - Both repos cloned locally under `/Users/vishal/code/`
+- Next: npm install + build verification for businessclaw-infinite, wire up REST API client in businessclaw
+
+### 2026-03-05 (b)
+- Completed: Full skill audit and cleanup (64 → 31 skills)
+  - Evaluated `/start-session` and `/wrap-up-session` — fixed both with stash/worktree/stale-log support
+  - Fixed `check-drip-campaign` (missing YAML frontmatter)
+  - Deleted 31 textbook/microsim skills (pipeline no longer active)
+  - Extracted 5 learning-design sub-skills from `learning-design-pillars` repo (Option A)
+  - Trimmed extracted skills: `canvas-assignment-design` 446→120, `canvas-course-audit` 375→119, etc.
+  - Deleted 8 redundant pattern skills Claude already knows (complex-state, resilient-async, zod-forms, etc.)
+  - Committed and pushed to claude-config repo
+- Next: Add more experiment templates (research, mixed)
+
+### 2026-03-05
+- Completed: Created openai-api skill for Claude Code
+  - Modeled after Anthropic's `claude-api` skill from `anthropics/skills` repo
+  - 23 files: SKILL.md routing layer + Python/TypeScript deep coverage + Java/Go/C#/cURL light coverage
+  - Covers Chat Completions API, Responses API, Agents SDK, structured outputs, tool use, batches
+  - Current model tables (GPT-5.4 flagship, o-series reasoning), research-verified pricing
+  - Committed to `~/.claude` (claude-config repo) and pushed to github.com/vishalsachdev/claude-config
+  - Design doc saved to `docs/plans/2026-03-05-openai-api-skill-design.md`
+- Next: Add more experiment templates (research, mixed)
+
+<!-- Older session logs (2025-12-26 through 2025-12-31) archived — see git history -->
