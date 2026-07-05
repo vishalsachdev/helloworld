@@ -28,10 +28,14 @@ cd api && python main.py
 # API at http://localhost:8000/docs
 ```
 
-## Current Focus
-- Expand coverage to all programs and courses
-- Add authentication and rate limiting
-- Consider GraphQL endpoint
+## Roadmap
+- [ ] Expand coverage to all programs and courses
+- [ ] Add authentication and rate limiting
+- [ ] Consider GraphQL endpoint
+
+## Session Log
+### 2025-12-27
+- Initial roadmap sections added
 
 ## Git Workflow
 ```bash
